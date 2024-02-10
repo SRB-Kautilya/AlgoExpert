@@ -2,7 +2,7 @@
 
 
 class LinkedList {
-    constructor(value){
+    constructor(value) {
         this.head = value;
         this.tail = null;
     }
@@ -12,13 +12,28 @@ class LinkedList {
 function middleNode(linkedList) {
     let curr = linkedList;
     let length = 0;
-    while(curr.next!==null){
+    while (curr.next !== null) {
         length++
     }
- for(let i = 0; i<=Math.floor(length/2);i++ ){
-    curr = curr.next;
- }
+    for (let i = 0; i <= Math.floor(length / 2); i++) {
+        curr = curr.next;
+    }
 
-return curr
-  }
-  
+    return curr
+}
+
+
+// if we have two pointers 1 is 1x and other is 2x faster , in this situation if 2x reaches end 1x will be center
+
+
+function middleNode(linkedList) {
+    let pointer = linkedList;
+    let pointer2 = linkedlist;
+
+    while (pointer2 !== null && pointer2.next !== null) {
+        pointer = pointer.next;
+        pointer2 = pointer2.next.next;
+    }
+
+    return pointer
+}
