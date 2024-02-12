@@ -24,3 +24,25 @@ function moveElementToEnd(array, toMove) {
     }
     return newArr
 }
+
+
+//o(n)
+function moveElementToEnd(array, toMove) {
+
+    let arr =[];
+    let left = 0;
+    let right = array.length-1;
+
+    array.map((item,i)=>{
+      if(item === toMove){
+        arr[right] = item;
+        right--
+      }else{
+        arr[left]= item;
+        left++
+      }
+
+    })
+
+
+}
