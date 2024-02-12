@@ -3,6 +3,8 @@
 //     "toMove": 2
 //   }
 
+// [1, 3, 4, 2, 2, 2, 2, 2]
+
 
 //0(n+m)
 function moveElementToEnd(array, toMove) {
