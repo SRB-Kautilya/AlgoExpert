@@ -19,10 +19,9 @@ class DoublyLinkedList {
 
     append(value) {
         let newNode = new Node(value);
-        newNode.prev = this.tail;
         this.tail.next = newNode;
+        newNode.prev = this.tail;
         this.tail = newNode;
-
         this.length++;
         return this;
     }
@@ -38,28 +37,28 @@ class DoublyLinkedList {
 
 
     insert(index, value) {
-
-        let newNode = new Node(value);
-
-        if (index >= this.length) {
-            return this.append(value);
+        if (index <= 0) {
+            this.prepend(value);
+        }else if(index>=this.length){
+            this.append(Value)
+        }else{
+            let node = new Node(value);
+            let curr = this.head;
+            let count = 0;
+            while(count !== index-1){
+                curr = curr.next;
+                count++;
+            }
+            let leader = curr;
+            let holdingPointer = leader.next;
+            curr.next = node;
+            node.next = holdingPointer;
+            node.prev = leader;
+            holdingPointer.prev = node;
+            this.length++
+            return this;
         }
 
-        let curr = this.head;
-        let count = 0;
-        while (count < index - 1) {
-            curr = curr.next;
-            count++
-        }
-
-        let holdPointer = curr;
-        let hold = curr.next;
-        curr.next = newNode;
-        newNode.next = hold;
-        newNode.prev = holdPointer;
-        hold.prev = newNode;
-        this.length++
-        return this
 
     }
 
@@ -71,7 +70,7 @@ class DoublyLinkedList {
             count++
         }
         let leader = curr;
-       let  unwantedNode = curr.next;
+        let unwantedNode = curr.next;
         leader.next = unwantedNode.next;
         unwantedNode.prev = leader
         return this
@@ -86,8 +85,9 @@ let doublyLinkedList = new DoublyLinkedList(10)
 console.log(doublyLinkedList.append(11))
 console.log(doublyLinkedList.append(12))
 console.log(doublyLinkedList.append(13))
+console.log(doublyLinkedList.prepend(9))
 console.log(doublyLinkedList.insert(3, 11.5))
-console.log(doublyLinkedList.remove(3))
+// console.log(doublyLinkedList.remove(3))
 
 
 //console.log(doublyLinkedList.append1(11))
