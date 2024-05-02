@@ -16,7 +16,7 @@ function middleNode(linkedList) {
         length++
     }
     for (let i = 0; i <= Math.floor(length / 2); i++) {
-        curr = curr.next;
+        curr = curr.next; 
     }
 
     return curr
