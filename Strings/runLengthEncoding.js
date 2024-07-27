@@ -17,6 +17,11 @@ function runLengthEncoding(string) {
     return arr.join('')
   }
 
+
+  
+
+
+
   //{
 //   "string": "AAAAAAAAAAAAABBCCCCDD"
 // }
