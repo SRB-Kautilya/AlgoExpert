@@ -43,6 +43,15 @@ let arr = [];
 //       return arr;
 //     }
 
+
+function sortedSquaredArray(array) {
+
+}
+
 console.log(sortedSquaredArray([-10, -5, 0, 5, 10]))
 
-[100, 25]
+
+[-5, -4, -3, -2, -1]
+
+5 >1 
+[1 4 16  25]
